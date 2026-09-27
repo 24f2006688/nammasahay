@@ -1,640 +1,792 @@
-# 🇮🇳 NammaSahay
+<div align="center">
 
-### A multilingual, voice-first AI companion for India's citizens
+<a href="https://github.com/24f2006688/nammasahay">
+  <img src="https://readme-typing-svg.demolab.com?font=Inter&weight=700&size=30&duration=2800&pause=900&color=5B5BF7&center=true&vCenter=true&width=900&lines=NammaSahay+%E2%80%94+AI+for+Everyday+India;Ask+%E2%80%A2+Speak+%E2%80%A2+Understand+%E2%80%A2+Act;Multilingual+%7C+Voice-First+%7C+Document-Aware" alt="NammaSahay animated headline" />
+</a>
 
-> **Ask naturally. Speak naturally. Understand documents. Get help in
-> your language.**
+<p>
+  <strong>A multilingual, voice-first AI companion for India's citizens.</strong><br/>
+  Built with <strong>Sarvam AI</strong> for <strong>Sarvam Campus '26 × IIT Madras</strong>.
+</p>
 
-NammaSahay is a citizen-focused AI assistant built with **Sarvam AI**
-for **Sarvam Campus '26 × IIT Madras**.
+<p>
+  <a href="https://nammasahay.vercel.app/"><strong>🚀 Live Demo</strong></a>
+  &nbsp;·&nbsp;
+  <a href="https://github.com/24f2006688/nammasahay"><strong>💻 Source Code</strong></a>
+  &nbsp;·&nbsp;
+  <a href="https://docs.sarvam.ai/"><strong>📚 Sarvam Docs</strong></a>
+</p>
 
-It combines multilingual chat, speech recognition, speech synthesis, and
-document intelligence into one simple interface so users can interact
-with digital services without needing to be fluent in English or
-comfortable with complex forms and portals.
+<br/>
 
-[![Built with Sarvam
-AI](https://img.shields.io/badge/Built%20with-Sarvam%20AI-5B5BF7?style=for-the-badge)](https://www.sarvam.ai/)
-[![Next.js](https://img.shields.io/badge/Next.js-16-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
-[![Tailwind
-CSS](https://img.shields.io/badge/Tailwind_CSS-4-06B6D4?style=for-the-badge&logo=tailwindcss)](https://tailwindcss.com/)
-[![GitHub](https://img.shields.io/badge/GitHub-Source_Code-181717?style=for-the-badge&logo=github)](https://github.com/24f2006688/nammasahay)
+[![Built with Sarvam AI](https://img.shields.io/badge/Built%20with-Sarvam%20AI-5B5BF7?style=for-the-badge)](https://www.sarvam.ai/)
+[![Next.js](https://img.shields.io/badge/Next.js-16-000000?style=for-the-badge&logo=next.js)](https://nextjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-4-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
 
-**Live Demo:** `YOUR_VERCEL_URL`\
-**Source Code:** https://github.com/24f2006688/nammasahay
+[![Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-000000?style=for-the-badge&logo=vercel)](https://vercel.com/)
+[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg?style=for-the-badge)](https://opensource.org/licenses/Apache-2.0)</div>
 
-------------------------------------------------------------------------
+---
 
-## 🧭 The Problem
+## ✨ Product in one sentence
 
-India is multilingual, but many digital experiences are still designed
-around typing, English-first interfaces, and difficult-to-understand
-documents.
+> **NammaSahay lets people ask questions, speak naturally, listen to answers, and understand complex documents in the language they are comfortable with.**
 
-A citizen may know exactly what they need, but still struggle because: -
-information is difficult to understand - service terminology is
-unfamiliar - typing is inconvenient - the user is more comfortable
-speaking than writing - government letters and forms contain dense
-information - regional-language and code-mixed communication is natural
+The product combines **multilingual chat, speech recognition, speech synthesis, and document intelligence** behind one simple citizen-facing interface. It is designed around a simple interaction principle:
 
-### NammaSahay changes the interaction model.
+<div align="center">
 
-Instead of forcing the citizen to adapt to the computer:
+### **The technology should adapt to the citizen — not the other way around.**
 
-**the computer adapts to the citizen.**
+</div>
 
-------------------------------------------------------------------------
+---
 
-# ✨ What NammaSahay Does
+## 🪄 Experience the product
 
-  -----------------------------------------------------------------------
-  Capability                          What happens
-  ----------------------------------- -----------------------------------
-  💬 **Ask**                          Ask questions naturally using
-                                      Sarvam-105B
+<div align="center">
 
-  🎙️ **Speak**                        Speak using Sarvam Saaras
+| 💬 Ask | 🎙️ Speak | 🔊 Listen | 📄 Understand |
+|:---:|:---:|:---:|:---:|
+| Natural text & code-mixed questions | Voice-first input | Spoken responses | Document extraction + explanation |
+| **Sarvam-105B** | **Saaras** | **Bulbul v3** | **Sarvam Vision / Document AI** |
 
-  🧠 **Understand**                   Sarvam-105B generates a contextual
-                                      response
+</div>
 
-  🔊 **Listen**                       Bulbul converts responses into
-                                      speech
 
-  📄 **Understand Documents**         Sarvam Vision / Document AI
-                                      extracts important information
 
-  🌐 **Multilingual**                 Indian-language and code-mixed
-                                      interaction
-  -----------------------------------------------------------------------
-
-------------------------------------------------------------------------
-
-# 🧠 The Core Idea
-
-NammaSahay is not just a chatbot. It is a **multimodal
-citizen-assistance layer**.
-
-``` text
-                         ┌─────────────────────┐
-                         │      CITIZEN        │
-                         │ Text / Voice / File │
-                         └──────────┬──────────┘
-                                    │
-                     ┌──────────────┴──────────────┐
-                     │                             │
-                  🎙️ Voice                     📄 Document
-                     │                             │
-                     ▼                             ▼
-                Saaras STT                  Sarvam Vision
-                     │                             │
-                     └──────────────┬──────────────┘
-                                    │
-                                    ▼
-                         ┌─────────────────────┐
-                         │    Sarvam-105B      │
-                         │ Understand + Reason │
-                         └──────────┬──────────┘
-                                    │
-                           ┌────────┴────────┐
-                           │                 │
-                         Text              Voice
-                           │                 │
-                           ▼                 ▼
-                       UI Answer          Bulbul TTS
-                                             │
-                                             ▼
-                                      🔊 Spoken Answer
+```text
+          ┌───────────────┐
+          │    CITIZEN    │
+          │ Text / Voice  │
+          │ / Document    │
+          └───────┬───────┘
+                  │
+          ┌───────▼────────┐
+          │  UNDERSTAND    │
+          │ Saaras / Vision│
+          └───────┬────────┘
+                  │
+             ┌────▼────┐
+             │  105B   │
+             │  🧠🌐  │
+             │  Reason │   
+             └────┬────┘
+                  │
+          ┌───────▼────────┐
+          │     RESPOND    │
+          │ Text / Bulbul  │
+          └───────┬────────┘
+                  │
+             ┌────▼────┐
+             │ CITIZEN │
+             │  Acts   │
+             └─────────┘
 ```
 
-------------------------------------------------------------------------
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=16&duration=2200&pause=500&color=6B7280&center=true&vCenter=true&width=760&lines=Speak+%E2%86%92+Saaras+%E2%86%92+Sarvam-105B+%E2%86%92+Bulbul+%E2%86%92+Listen;Upload+%E2%86%92+Document+AI+%E2%86%92+105B+%E2%86%92+Understand+%E2%86%92+Act" alt="Animated NammaSahay pipelines" />
+</p>
 
-# 🚀 Demo Experience
+---
 
-## 1. 💬 Ask
+# 🧭 Why NammaSahay?
 
-Users can type naturally in English, Tamil, Hindi, or mixed language.
+India is multilingual and naturally code-mixed, while many digital experiences still assume:
 
-Example:
+- typing is comfortable
+- English is the preferred language
+- service terminology is already familiar
+- important information exists only as readable text
+- users can interpret dense forms and official documents themselves
 
-``` text
-Aadhaar card-ai eppadi update panrathu?
+NammaSahay changes the interaction model.
+
+### Instead of:
+
+```text
+Citizen → Keyboard → English → Complex portal → Search → Interpret
 ```
 
-The request is sent to **Sarvam-105B** and returned as a
-citizen-friendly explanation.
+### NammaSahay aims for:
 
-## 2. 🎙️ Speak
-
-``` text
-Citizen speaks
-      ↓
-Saaras Speech-to-Text
-      ↓
-Transcript
-      ↓
-Sarvam-105B
-      ↓
-Answer
+```text
+Citizen
+   │
+   ├── speaks naturally
+   ├── types naturally
+   └── uploads a document
+             │
+             ▼
+        AI understands
+             │
+             ▼
+     Clear explanation
+             │
+             ▼
+        Next action
 ```
 
-## 3. 🔊 Listen
+The goal is not to replace official services. The goal is to make information **easier to understand and interact with**.
 
-``` text
-Sarvam-105B response
-        ↓
-Bulbul v3
-        ↓
-Natural Indian-language speech
+---
+
+# 🚀 Core capabilities
+
+## 01 — 💬 Ask
+
+Ask questions naturally in supported Indian languages, English, or code-mixed language.
+
+```text
+"Aadhaar card-ai eppadi update panrathu?"
 ```
 
-This creates a complete conversational loop:
+**Pipeline**
 
-**Speech → Understanding → Reasoning → Speech**
-
-## 4. 📄 Understand a Document
-
-Users can upload a PDF or image containing a letter, form, certificate,
-or other document.
-
-``` text
-Document
-   ↓
-Sarvam Vision / Document AI
-   ↓
-Structured information
+```text
+User text
    ↓
 Sarvam-105B
    ↓
-Simple explanation
+Contextual reasoning
+   ↓
+Citizen-friendly answer
 ```
 
-The goal is not merely OCR.
+---
 
-The goal is:
+## 02 — 🎙️ Speak
 
-> **"Tell me what this document means and what I need to do next."**
+Voice is a first-class input method.
 
-------------------------------------------------------------------------
-
-# 🇮🇳 Designed for India
-
-NammaSahay is designed around real Indian communication patterns:
-
--   Native Indian scripts
--   Romanized Indian-language input
--   Code-mixed communication
--   Voice-first interaction
--   Regional-language explanations
--   Documents containing Indian languages
-
-Sarvam provides native Indian-language capabilities across speech, chat,
-and document workflows.
-
-------------------------------------------------------------------------
-
-# 🧩 Sarvam AI Stack
-
-### 🧠 Sarvam-105B
-
-Reasoning and conversational engine.
-
-``` text
-User intent
-    ↓
-Context understanding
-    ↓
-Reasoning
-    ↓
-Citizen-friendly response
-```
-
-### 🎙️ Saaras
-
-Speech-to-text:
-
-``` text
-Human speech → Text
-```
-
-### 🔊 Bulbul v3
-
-Text-to-speech:
-
-``` text
-Text → Natural speech
-```
-
-### 👁️ Sarvam Vision / Document AI
-
-Document intelligence:
-
-``` text
-PDF / Scan / Image
-       ↓
-OCR + Structure
-       ↓
-Fields / Content
-       ↓
-LLM explanation
-```
-
-Official docs: -
-https://docs.sarvam.ai/api/getting-started/models/sarvam-105b -
-https://docs.sarvam.ai/api/getting-started/models -
-https://docs.sarvam.ai/api/getting-started/models/bulbul -
-https://docs.sarvam.ai/api/api-guides-tutorials/document-intelligence/overview
-
-------------------------------------------------------------------------
-
-# 🏗️ Technical Architecture
-
-``` text
-┌─────────────────────────────────────────────────────────┐
-│                    NEXT.JS FRONTEND                     │
-│  Chat UI • Voice UI • Document Upload • Language       │
-└──────────────────────────┬──────────────────────────────┘
-                           │
-                           ▼
-┌─────────────────────────────────────────────────────────┐
-│                 NEXT.JS API ROUTE                       │
-│                       /api/chat                          │
-│                                                         │
-│  • Validates requests                                   │
-│  • Keeps API key server-side                            │
-│  • Routes text / voice / document workflows             │
-└───────────────┬─────────────────┬───────────────────────┘
-                │                 │
-                ▼                 ▼
-          Sarvam-105B          Saaras
-                │                 │
-                │                 ▼
-                │              Transcript
-                │                 │
-                └────────┬────────┘
-                         ▼
-                    Citizen Answer
-                         │
-                         ▼
-                       Bulbul
-                         │
-                         ▼
-                  Spoken Response
-
-                     + Document AI
-                         │
-                         ▼
-                   Sarvam Vision
-                         │
-                         ▼
-                  Structured Data
-                         │
-                         ▼
-                    Sarvam-105B
-```
-
-------------------------------------------------------------------------
-
-# 🛠️ Tech Stack
-
-### Frontend
-
--   Next.js 16
--   React
--   TypeScript
--   Tailwind CSS
--   App Router
-
-### AI
-
--   Sarvam-105B
--   Saaras Speech-to-Text
--   Bulbul v3 Text-to-Speech
--   Sarvam Vision / Document AI
-
-### Deployment
-
--   Vercel
--   GitHub
-
-------------------------------------------------------------------------
-
-# 📁 Project Structure
-
-``` text
-nammasahay/
-├── app/
-│   ├── api/
-│   │   └── chat/
-│   │       └── route.ts
-│   ├── globals.css
-│   ├── layout.tsx
-│   └── page.tsx
-├── lib/
-│   └── sarvam/
-│       └── client.ts
-├── public/
-├── .env.local
-├── .gitignore
-├── package.json
-├── package-lock.json
-├── next.config.ts
-└── README.md
-```
-
-------------------------------------------------------------------------
-
-# ⚙️ Local Setup
-
-## Prerequisites
-
--   Node.js 20+
--   npm
--   Git
--   Sarvam API key
-
-## 1. Clone
-
-``` bash
-git clone https://github.com/24f2006688/nammasahay.git
-cd nammasahay
-```
-
-## 2. Install
-
-``` bash
-npm install
-```
-
-## 3. Configure
-
-Create `.env.local`:
-
-``` env
-SARVAM_API_KEY=your_sarvam_api_key
-```
-
-**Never commit `.env.local`.**
-
-## 4. Run
-
-``` bash
-npm run dev
-```
-
-Open:
-
-``` text
-http://localhost:3000
-```
-
-------------------------------------------------------------------------
-
-# 🔐 Security
-
-The Sarvam API key stays server-side.
-
-``` text
-Browser
-   │
-   │ No API key
-   ▼
-Next.js API Route
-   │
-   │ SARVAM_API_KEY
-   ▼
-Sarvam API
-```
-
-Use:
-
-``` env
-SARVAM_API_KEY=...
-```
-
-Do **not** expose it through browser-side variables such as:
-
-``` env
-NEXT_PUBLIC_SARVAM_API_KEY=...
-```
-
-------------------------------------------------------------------------
-
-# 🌐 Deployment
-
-Deploy through Vercel:
-
-1.  Import `24f2006688/nammasahay`
-2.  Select Next.js
-3.  Add `SARVAM_API_KEY` under Environment Variables
-4.  Deploy
-5.  Test the live URL
-
-**Live Demo:** `YOUR_VERCEL_URL`
-
-------------------------------------------------------------------------
-
-# 🧪 Demo Scenarios
-
-### Scenario 1 --- Everyday service
-
-``` text
-Aadhaar card-ai eppadi update panrathu?
-```
-
-``` text
-Text / Voice
+```text
+Human speech
      ↓
+  Saaras STT
+     ↓
+  Transcript
+     ↓
+ Sarvam-105B
+     ↓
+   Answer
+```
+
+This allows the user to communicate without first converting their thoughts into formal written English.
+
+---
+
+## 03 — 🔊 Listen
+
+Every useful answer can become spoken output.
+
+```text
 Sarvam-105B
      ↓
-Tamil / Tanglish explanation
+  Bulbul v3
+     ↓
+Natural speech
+     ↓
+   Citizen
 ```
 
-### Scenario 2 --- Voice-first citizen
+The result is a conversational loop:
 
-``` text
-எனக்கு பாஸ்போர்ட் apply பண்ணணும்.
-என்ன documents வேண்டும்?
-```
+> **Speech → Understanding → Reasoning → Speech**
 
-``` text
-Voice → Saaras → Sarvam-105B → Bulbul → Voice
-```
+---
 
-### Scenario 3 --- Document understanding
+## 04 — 📄 Understand documents
 
-``` text
+Upload a PDF or image containing a letter, form, certificate, or other information-heavy document.
+
+```text
 PDF / Image
     ↓
-Sarvam Vision
+Document AI / Sarvam Vision
     ↓
-Structured extraction
+Structured information
     ↓
 Sarvam-105B
+    ↓
+Simple explanation
     ↓
 "What does this mean?"
 "What should I do next?"
 ```
 
-------------------------------------------------------------------------
+The product is designed to go beyond raw OCR. The useful output is the **meaning and actionable context**.
 
-# 💡 Why This Architecture?
+---
 
-A conventional chatbot assumes:
+# 🏗️ System architecture
 
-``` text
-User → Keyboard → English → Chatbot
+```mermaid
+flowchart TB
+    U["🇮🇳 Citizen<br/>Text • Voice • Document"]
+
+    subgraph UI["NammaSahay Web Experience"]
+      WEB["Next.js 16<br/>React + TypeScript + Tailwind"]
+    end
+
+    subgraph INPUT["Multimodal Understanding"]
+      STT["🎙️ Saaras<br/>Speech → Text"]
+      DOC["📄 Sarvam Vision / Document AI<br/>Document → Structured Data"]
+    end
+
+    LLM["🧠 Sarvam-105B<br/>Understand • Reason • Respond"]
+
+    subgraph OUTPUT["Response Layer"]
+      TXT["💬 Text Response"]
+      TTS["🔊 Bulbul v3<br/>Text → Speech"]
+    end
+
+    U --> WEB
+    WEB -->|Text| LLM
+    WEB -->|Voice| STT
+    WEB -->|Document| DOC
+    STT --> LLM
+    DOC --> LLM
+    LLM --> TXT
+    LLM --> TTS
+    TTS --> WEB
+    TXT --> WEB
+
+    classDef user fill:#111827,stroke:#6B7280,color:#fff;
+    classDef app fill:#312E81,stroke:#818CF8,color:#fff;
+    classDef ai fill:#5B21B6,stroke:#A78BFA,color:#fff;
+    classDef out fill:#0F766E,stroke:#5EEAD4,color:#fff;
+
+    class U user;
+    class WEB app;
+    class STT,DOC,LLM ai;
+    class TXT,TTS out;
 ```
 
-NammaSahay aims for:
+### Request lifecycle
 
-``` text
-User
- ├── speaks
- ├── types
- └── uploads a document
-          ↓
-      AI understands
-          ↓
-  responds in the user's
-  preferred language
+```mermaid
+sequenceDiagram
+    autonumber
+    participant C as Citizen
+    participant W as Web App
+    participant S as Sarvam API
+    participant M as Sarvam-105B
+    participant B as Bulbul / Document AI
+
+    C->>W: Ask / Speak / Upload
+    alt Voice
+        W->>S: Audio
+        S-->>W: Transcript
+        W->>M: User intent + transcript
+    else Document
+        W->>B: Document
+        B-->>W: Structured information
+        W->>M: Document context + question
+    else Text
+        W->>M: User message
+    end
+
+    M-->>W: Clear response
+
+    opt User selects Listen
+        W->>S: Text
+        S-->>W: Speech audio
+        W-->>C: Spoken response
+    end
 ```
 
-The interface becomes a bridge between people and digital information.
+---
 
-------------------------------------------------------------------------
+# 🧠 Sarvam AI integration
 
-# 🎯 Design Principles
+| Component | Role in NammaSahay | Product flow |
+|---|---|---|
+| **Sarvam-105B** | Core language reasoning | Intent → context → response |
+| **Saaras** | Speech recognition | Voice → text |
+| **Bulbul v3** | Speech synthesis | Text → voice |
+| **Sarvam Vision / Document AI** | Document intelligence | Document → structured information |
 
-### 1. Language should not be a barrier
+### Why this architecture?
 
-Users should not have to translate their thoughts into English before
-asking for help.
+Each model handles a distinct modality:
 
-### 2. Voice is a first-class input
-
-Speaking can be more natural than typing.
-
-### 3. Documents should become understandable
-
-The useful output is not just extracted text:
-
--   What is this?
--   What does it mean?
--   What is important?
--   What should I do next?
-
-### 4. Keep interaction simple
-
-The AI complexity stays behind the interface.
-
-``` text
-Ask → Understand → Act
+```text
+          INPUT
+            │
+     ┌──────┼──────┐
+     ▼      ▼      ▼
+   TEXT   VOICE  DOCUMENT
+     │      │      │
+     │    Saaras  Vision
+     │      │      │
+     └──────┼──────┘
+            ▼
+       Sarvam-105B
+            │
+       ┌────┴────┐
+       ▼         ▼
+     TEXT      BULBUL
+       │         │
+       └────┬────┘
+            ▼
+          OUTPUT
 ```
 
-------------------------------------------------------------------------
+Official references:
 
-# 🔮 Roadmap
+- [Sarvam models](https://docs.sarvam.ai/api/getting-started/models)
+- [Sarvam-105B](https://docs.sarvam.ai/api/getting-started/models/sarvam-105b)
+- [Bulbul](https://docs.sarvam.ai/api/getting-started/models/bulbul)
+- [Document Intelligence](https://docs.sarvam.ai/api/api-guides-tutorials/document-intelligence/overview)
 
-## Phase 1 --- Current
+---
 
--   [x] Multilingual chat
--   [x] Sarvam-105B reasoning
--   [x] Voice input
--   [x] Speech-to-text
--   [x] Text-to-speech
--   [x] Document upload
--   [x] Document extraction
--   [x] Document explanation
--   [x] Responsive web UI
+# 🇮🇳 Built around Indian communication
 
-## Phase 2
+NammaSahay is designed for interaction patterns that are common in India:
 
--   [ ] Conversation history
--   [ ] Automatic language detection
--   [ ] Improved code-mixed handling
--   [ ] Streaming voice interaction
--   [ ] More document templates
--   [ ] Verified official-source layer
--   [ ] Accessibility improvements
+- **Native scripts**
+- **Romanized Indian languages**
+- **Code-mixed language**
+- **Voice-first interaction**
+- **Regional-language explanations**
+- **Documents containing Indian languages**
 
-## Phase 3
+Example:
 
--   [ ] Government-service workflow navigation
--   [ ] Personalized document checklist
--   [ ] Application-status assistance
--   [ ] RAG over verified government information
--   [ ] WhatsApp integration
--   [ ] Low-bandwidth mode
--   [ ] PWA / mobile app
+```text
+Formal English:
+"How can I update my Aadhaar address?"
 
-------------------------------------------------------------------------
+Natural code-mixed interaction:
+"Aadhaar address online-la eppadi change panrathu?"
+```
 
-# 🏆 Hackathon Pitch
+The interface does not require the user to translate their thought process into formal English before asking for help.
 
-### 30-second version
+---
 
-> **NammaSahay is a multilingual, voice-first AI assistant for India's
-> citizens. Instead of forcing people to type in English and navigate
-> complicated information, users can speak or type naturally in their
-> own language. Saaras converts speech to text, Sarvam-105B understands
-> the request and generates the response, and Bulbul speaks the answer
-> back. Users can also upload government documents and have Sarvam
-> Vision extract and explain important information. The goal is simple:
-> make digital information understandable and accessible in the language
-> people actually use.**
+# 🎬 Demo scenarios
 
-### One-line pitch
+## Scenario A — Everyday service question
 
-> **NammaSahay turns India's complex digital information into a
-> conversation people can have in their own language.**
+```text
+👤 Aadhaar card-ai eppadi update panrathu?
 
-------------------------------------------------------------------------
+        ↓
 
-# 📊 Product Snapshot
+🧠 Sarvam-105B
 
-  Dimension               NammaSahay
-  ----------------------- -----------------------------
-  Primary users           Indian citizens
-  Interaction             Text + Voice + Documents
-  AI reasoning            Sarvam-105B
-  Speech recognition      Saaras
-  Speech synthesis        Bulbul v3
-  Document intelligence   Sarvam Vision / Document AI
-  Frontend                Next.js + TypeScript
-  Styling                 Tailwind CSS
-  Deployment              Vercel
-  Repository              `24f2006688/nammasahay`
+        ↓
 
-------------------------------------------------------------------------
+💬 Clear Tamil / Tanglish explanation
+```
+
+---
+
+## Scenario B — Voice-first interaction
+
+```text
+👤 "எனக்கு பாஸ்போர்ட் apply பண்ணணும்.
+    என்ன documents வேண்டும்?"
+
+        ↓
+
+🎙️ Saaras
+
+        ↓
+
+🧠 Sarvam-105B
+
+        ↓
+
+🔊 Bulbul v3
+
+        ↓
+
+👤 Spoken answer
+```
+
+---
+
+## Scenario C — Document understanding
+
+```text
+📄 Upload PDF / Image
+        ↓
+👁️ Document AI / Vision
+        ↓
+🧾 Structured information
+        ↓
+🧠 Sarvam-105B
+        ↓
+💡 Simple explanation
+        ↓
+➡️ Next-step guidance
+```
+
+---
+
+# 🛡️ Engineering & security
+
+The browser never receives the Sarvam API key.
+
+```text
+┌──────────────┐
+│   Browser    │
+│              │
+│  No API Key  │
+└──────┬───────┘
+       │
+       │ HTTPS request
+       ▼
+┌──────────────────────┐
+│ Next.js API Route    │
+│ /api/chat            │
+│                      │
+│ Server-side secret   │
+└──────────┬───────────┘
+           │
+           │ SARVAM_API_KEY
+           ▼
+┌──────────────────────┐
+│      Sarvam API      │
+└──────────────────────┘
+```
+
+### Environment configuration
+
+```env
+SARVAM_API_KEY=your_sarvam_api_key
+```
+
+Never expose it as:
+
+```env
+NEXT_PUBLIC_SARVAM_API_KEY=...
+```
+
+And never commit `.env.local`.
+
+---
+
+# 🧰 Technology stack
+
+<div align="center">
+
+| Layer | Technology |
+|---|---|
+| **Frontend** | Next.js 16, React, TypeScript |
+| **UI** | Tailwind CSS 4 |
+| **AI reasoning** | Sarvam-105B |
+| **Speech-to-text** | Saaras |
+| **Text-to-speech** | Bulbul v3 |
+| **Document intelligence** | Sarvam Vision / Document AI |
+| **API layer** | Next.js Route Handler |
+| **Source control** | Git + GitHub |
+| **Deployment** | Vercel |
+
+</div>
+
+---
+
+# 📁 Project structure
+
+```text
+nammasahay/
+│
+├── app/
+│   ├── api/
+│   │   └── chat/
+│   │       └── route.ts        # Unified AI API workflows
+│   │
+│   ├── globals.css             # Global design system
+│   ├── layout.tsx              # App shell + metadata
+│   └── page.tsx                # Main citizen experience
+│
+├── lib/
+│   └── sarvam/
+│       └── client.ts           # Sarvam integration helpers
+│
+├── public/                     # Static assets
+│
+├── .env.local                  # Local secrets (never commit)
+├── .gitignore
+├── next.config.ts
+├── package.json
+├── package-lock.json
+├── LICENSE        ←--- Apache 2.0
+└── README.md
+```
+
+---
+
+# ⚡ Quick start
+
+## Prerequisites
+
+- Node.js 20+
+- npm
+- Git
+- Sarvam API key
+
+## 1. Clone
+
+```bash
+git clone https://github.com/24f2006688/nammasahay.git
+cd nammasahay
+```
+
+## 2. Install dependencies
+
+```bash
+npm install
+```
+
+## 3. Configure environment
+
+Create `.env.local`:
+
+```env
+SARVAM_API_KEY=your_sarvam_api_key
+```
+
+## 4. Start development
+
+```bash
+npm run dev
+```
+
+Open:
+
+```text
+http://localhost:3000
+```
+
+---
+
+# ☁️ Deploy to Vercel
+
+1. Import the GitHub repository.
+2. Select the Next.js project.
+3. Add `SARVAM_API_KEY` to the project environment variables.
+4. Deploy.
+5. Open the production URL and test text, voice, and document workflows.
+
+### Production
+
+**Live Demo:** https://nammasahay.vercel.app/
+
+---
+
+# 📊 Product snapshot
+
+| Dimension | NammaSahay |
+|---|---|
+| Primary users | Indian citizens |
+| Interaction | Text + Voice + Documents |
+| Language experience | Multilingual + code-mixed |
+| AI reasoning | Sarvam-105B |
+| Speech recognition | Saaras |
+| Speech synthesis | Bulbul v3 |
+| Document intelligence | Sarvam Vision / Document AI |
+| Frontend | Next.js + TypeScript |
+| Styling | Tailwind CSS |
+| Deployment | Vercel |
+| Repository | `24f2006688/nammasahay` |
+
+---
+
+# 🧪 Current capabilities
+
+```text
+1.  Multilingual chat
+2.  Sarvam-105B reasoning
+3.  Voice input
+4.  Speech-to-text
+5.  Text-to-speech
+6.  Document upload
+7.  Document extraction
+8.  Document explanation
+9.  Responsive web interface
+```
+
+---
+
+# 🗺️ Roadmap
+
+### Phase 01 — Current foundation
+
+- [x] Multilingual chat
+- [x] Voice input
+- [x] Speech-to-text
+- [x] Text-to-speech
+- [x] Document upload
+- [x] Document extraction
+- [x] Document explanation
+- [x] Responsive UI
+
+### Phase 02 — Product depth
+
+- [ ] Conversation history
+- [ ] Automatic language detection
+- [ ] Improved code-mixed handling
+- [ ] Streaming voice interaction
+- [ ] More document templates
+- [ ] Verified official-source layer
+- [ ] Accessibility improvements
+
+### Phase 03 — Citizen workflows
+
+- [ ] Government-service workflow navigation
+- [ ] Personalized document checklist
+- [ ] Application-status assistance
+- [ ] RAG over verified government information
+- [ ] WhatsApp integration
+- [ ] Low-bandwidth mode
+- [ ] PWA / mobile application
+
+---
+
+# 💡 Product principles
+
+### 01 — Language is an interface
+
+Users should be able to express intent in the language and form they naturally use.
+
+### 02 — Voice is not an add-on
+
+For many interactions, speaking can be more natural than typing. NammaSahay therefore treats speech as a primary input/output path.
+
+### 03 — Documents should become understandable
+
+The useful result is not only extracted text.
+
+It is:
+
+```text
+What is this?
+     ↓
+What does it mean?
+     ↓
+What matters?
+     ↓
+What should I do next?
+```
+
+### 04 — AI complexity stays behind the interface
+
+The citizen sees a simple experience:
+
+```text
+ASK → UNDERSTAND → ACT
+```
+
+while the application coordinates multiple AI capabilities behind the scenes.
+
+---
+
+# 🧱 Production-oriented design direction
+
+NammaSahay's current architecture intentionally keeps the AI integration behind a server-side boundary.
+
+This gives the project a clean path toward future additions such as:
+
+```text
+                    ┌────────────────────┐
+                    │ Verified Sources   │
+                    │ Government / APIs  │
+                    └─────────┬──────────┘
+                              │
+                              ▼
+Citizen → NammaSahay → Orchestration Layer
+                              │
+             ┌────────────────┼────────────────┐
+             ▼                ▼                ▼
+         Sarvam 105B       Document AI       Speech
+             │                │                │
+             └────────────────┼────────────────┘
+                              ▼
+                       Clear response
+```
+
+Future production work would focus on source verification, observability, authentication, rate limiting, privacy controls, evaluation, and stronger workflow validation.
+
+---
+
+# 🏆 Born at Sarvam Campus '26
+
+**NammaSahay was built for Sarvam Campus '26 × IIT Madras**, around the theme:
+
+> **Build with Sarvam AI**
+
+The project demonstrates how multiple Sarvam capabilities can be composed into one user-facing application rather than presenting a single-model chatbot.
+
+### The core product loop
+
+```text
+                 🇮🇳 CITIZEN
+                     │
+          ┌──────────┼──────────┐
+          │          │          │
+        TYPE       SPEAK      UPLOAD
+          │          │          │
+          │       SAARAS     VISION / DOC AI
+          │          │          │
+          └──────────┼──────────┘
+                     ▼
+               SARVAM-105B
+                     │
+              ┌──────┴──────┐
+              ▼             ▼
+            TEXT          BULBUL
+              │             │
+              └──────┬──────┘
+                     ▼
+                 UNDERSTAND
+                     │
+                     ▼
+                    ACT
+```
+
+---
 
 # 🌱 Vision
 
-Technology becomes truly useful when people do not have to change
-themselves to use it.
+Technology becomes truly useful when people do not have to change themselves to use it.
 
-NammaSahay is built around one principle:
+<div align="center">
 
-> ## **AI should meet people where they are --- in their language, their voice, and their everyday context.**
+## **AI should meet people where they are — in their language, their voice, and their everyday context.**
 
-------------------------------------------------------------------------
+</div>
 
-## 🔗 Links
+---
 
--   **GitHub:** https://github.com/24f2006688/nammasahay
--   **Live Demo:** `YOUR_VERCEL_URL`
--   **Sarvam AI:** https://www.sarvam.ai/
--   **Sarvam API Docs:** https://docs.sarvam.ai/
+# 🔗 Links
 
-------------------------------------------------------------------------
+| Resource | Link |
+|---|---|
+| 🚀 **Live Demo** | https://nammasahay.vercel.app/ |
+| 💻 **GitHub** | https://github.com/24f2006688/nammasahay |
+| 🤖 **Sarvam AI** | https://www.sarvam.ai/ |
+| 📚 **Sarvam API Docs** | https://docs.sarvam.ai/ |
 
-::: {align="center"}
-## 🇮🇳 NammaSahay
+---
 
-### **Ask naturally. Speak naturally. Understand documents.**
+<div align="center">
+
+### 🇮🇳 NammaSahay
+
+**Ask naturally. Speak naturally. Understand documents.**
+
+<br/>
+
+<img src="https://readme-typing-svg.demolab.com?font=Inter&weight=600&size=18&duration=2500&pause=900&color=5B5BF7&center=true&vCenter=true&width=700&lines=Built+with+Sarvam+AI;Sarvam+Campus+%2726+%C3%97+IIT+Madras;Designed+for+India" alt="NammaSahay animated footer" />
+
+<br/><br/>
 
 **Built with ❤️ using Sarvam AI**
 
-**Sarvam Campus '26 × IIT Madras**
-:::
+</div>
